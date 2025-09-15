@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de Productos</title>
+</head>
+<body>
+  <h1>Productos Registrados</h1>
+  <table border="1" >
+    <tr>
+      <th>Código</th>
+      <th>Tipo</th>
+      <th>Descripción</th>
+      <th>Stock</th>
+      <th>Precio</th>
+    </tr>
+    <% productos.forEach(producto => { %>
+      <tr>
+        <td><%= producto.Codigo %></td>
+        <td><%= producto.Tipo %></td>
+        <td><%= producto.Descripcion %></td>
+        <td><%= producto.Stock %></td>
+        <td><%= producto.Precio %></td>
+      </tr>
+    <% }) %>
+  </table>
+
+  <br>
+  <a href="/hola"><button>Volver a Inicio</button></a>
+  <a href="/input_product"><button>Añadir producto</button></a>
+</body>
+</html>
